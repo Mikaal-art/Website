@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.training h1{
+    text-align: center;
+    padding: 25px 0px;
+
+}
+.container{
+    width: 1160px;
+    margin: auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    display: flex;
+    border: 1px solid red;
+    text-align: center;
+}
+.training items{
+    flex-basis: 33%;
+    background : red
+    
+   
+}
+.Hello{
+    background-color: aqua;
+}
+
+
+    
+        
+    
+    
+

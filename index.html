@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="en">
+<link rel="stylesheet" href="">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <title>TechTrekker.com</title>
+
+
+  <style>
+    .footer {
+      font-size: 18px;
+    }
+
+    .navbar {
+      margin-bottom: -10px;
+      margin-top: -4px;
+    }
+
+    /* Default font size (optional, adjust as needed) */
+    .btn-danger,
+    .btn-warning,
+    .btn-success {
+      font-size: 14px;
+      /* Adjust default size */
+    }
+
+    /* Media query for small screens (adjust breakpoint as needed) */
+    @media screen and (max-width: 500px) {
+
+      .btn-danger,
+      .btn-warning,
+      .btn-success {
+        font-size: 8px;
+        /* Smaller size for small screens */
+        padding: 20px;
+        ;
+      }
+    }
+
+    .btn-danger,
+    .btn-warning,
+    .btn-success {
+      padding: 6px;
+      /* Adjust padding for desired shape */
+      width: auto;
+      /*Allow buttons to adjust width to content*/
+    }
+
+    .btn-primary {
+      padding: 6px;
+      font-size: 16px;
+    }
+
+    .card-group {
+      margin-left: 40px;
+      margin-right: 40px;
+
+    }
+
+    .footer {
+      width: 100%;
+      /* Set footer to full width */
+      height: 200px;
+      /* Set footer height to 200px (adjust as needed) */
+      background-color: #333;
+      /* Set background color to dark grey */
+      color: #fff;
+      /* Set text color to white */
+      display: flex;
+      /* Arrange content horizontally */
+      justify-content: space-between;
+      /* Distribute content evenly */
+      align-items: center;
+      /* Align content vertically in the center */
+      padding: 20px;
+      /* Add some space between the content and the edges */
+    }
+
+    .social-icon,
+    .menu {
+      list-style: none;
+      /* Remove default bullet points */
+      padding: 0;
+      /* Remove default padding */
+      margin: 0;
+      /* Remove default margin */
+    }
+
+    .social-icon__item,
+    .menu__item {
+      display: inline-block;
+      /* Display list items inline */
+      margin-right: 20px;
+      /* Add space between list items */
+    }
+
+    .social-icon__item:last-child,
+    .menu__item:last-child {
+      margin-right: 0;
+      /* Remove margin from the last item */
+    }
+
+    .social-icon__link,
+    .menu__link {
+      color: inherit;
+      /* Inherit the text color from the footer */
+      text-decoration: none;
+      /* Remove underline from links */
+    }
+
+    p {
+      text-align: center;
+      /* Center the copyright text */
+      margin: 0;
+      /* Remove default margin */
+    }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+ }
+
+ * {
+  box-sizing: border-box;
+}
+
+/* Create four equal columns that floats next to each other */
+.pen{
+  float: left;
+  width: 23%;
+padding-left: 80px;
+
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (max-width: 992px) {
+  .pen{
+    width: 47%;
+    margin-right: 15px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .pen {
+    width: 100%;
+    padding-left: 7px;
+    margin-left: 33px;
+    
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .one{
+    height: 80vh;
+}
+
+}
+</style>
+</head>
+
+<body>
+  <h4>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="index.html">
+        <h4 class="text-light nav-link" href="index.html"><img src="logo-1.png" alt="logo"
+            style="height: 50px; width: 50px; border-radius: 50px ;"></h4>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link navbar-dark bg-dark" href="index.html">
+              <h4>Home</h4> <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navbar-dark bg-dark" href="about.html">
+              <h4>About</h4>
+            </a>
+          </li>
+          <h4>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle navbar-dark bg-dark" href="#" id="navbarDropdown" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Topics
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="technology.html" target="_blank">Technology</a>
+                <a class="dropdown-item" href="game development.html" target="_blank">Game development</a>
+                <!-- <div class="dropdown-divider"></div> -->
+                <a class="dropdown-item" href="support.html">Support</a>
+                <a class="dropdown-item" href="Write.html">Write for us</a>
+              </div>
+            </li>
+          </h4>
+          <li class="nav-item">
+            <a class="nav-link navbar-dark bg-dark" href="contact.html">
+              <h4>Contact us</h4>
+            </a>
+          </li>
+        </ul>
+        <h4>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search">
+            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </h4>
+        <h4>
+          <div class="mx-2">
+            <button class="btn btn-primary" data-toggle="modal" data-target="#LoginModal">Login</button>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#SignUpModal">SignUp</button>
+        </h4>
+      </div>
+      </div>
+    </nav>
+  </h4>
+  <div style="overflow: hidden; white-space: nowrap;">
+    <div class="container-fluid" style="display: inline-block; animation: marquee 25s linear infinite; font-weight: bold;">
+      NOTE: More announcements from TechTrekker will be updated soon. Thanks for your patience. Please keep visiting
+      our Website!
+    </div>
+  </div>
+
+
+
+
+  <div class="modal-container">
+    <!-- Login Modal -->
+    <div class="modal fade" id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="LoginModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="LoginModalLabel">Login to TechTrekker</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                  else.</small>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+              </div>
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!--Sign Up Modal -->
+    <div class="modal fade" id="SignUpModal" tabindex="-1" role="dialog" aria-labelledby="SignUpModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="SignUpModalLabel">Get an TechTrekker account</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+
+              <div class="form-group">
+                <label for="">Your Name</label>
+                <input type="Name" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                  else.</small>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1"> Confirm Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+              </div>
+
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  </nav>
+
+  <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+
+        <img style="height: 84vh;" src="Icoder.1 .jpeg" class="d-block w-100" alt="...">
+        <div class="carousel-caption ">
+          
+          <h1 class=" mb-2 text-warning">Welcome to Tech Trekker</h1>
+          <p class=" mb-2 text-light">Technology,News,Development and trends</p>
+          <a href="javascript.html" target="_blank"><button class="btn btn-danger "
+              class="carousel-caption">JavaScript</button></a>
+          <a href="web development.html" target="_blank"><button class="btn btn-warning " class="carousel-caption">Web
+              Development</button></a>
+          <a href="cyber security .html"><button class="btn btn-success" class="carousel-caption">Cyber
+              security</button></a>
+        </div>
+      </div>
+    
+      <div class="carousel-item">
+        <img style="height: 84vh;" src="pic.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption ">
+          <h2 class="d-inline-block mb-2 text-warning">Start learning with Tech Trekker</h2>
+          <p class=" mb-2 text-success">Technology,News,Development and trends</p>
+          <a href="javascript.html" target="_blank"><button class="btn btn-danger ">JavaScript</button></a>
+          <a href="web development.html" target="_blank"><button class="btn btn-warning ">Web Development</button>
+            <a href="cyber security .html" target="_blank"><button class="btn btn-success ">Cyber security</button></a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img style="height: 84vh;"
+          src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?cs=srgb&dl=pexels-luis-gomes-546819.jpg&fm=jpg"
+          class="d-block w-100">
+        <div class="carousel-caption ">
+          <h4 class="d-inline-block mb-2 text-warning">Best Website for learning Programming and coding </h4>
+          <p>Technology,News,Development and trends</p>
+          <a href="javascript.html" target="_blank"><button class="btn btn-danger">JavaScript</button></a>
+          <a href="web development.html" target="_blank"></a><button class="btn btn-warning">Web Development</button>
+          <a href="cyber security .html" target="_blank"></a><button class="btn btn-success">Cyber security</button>
+        </div>
+      </div>
+    </div>
+
+
+
+    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  
+    <div class="row" style="padding: 20px;">
+     <div class="pen"><div class="col-lg-4 pb-3">
+        <div class="card" style="width: 18rem; box-shadow: 8px 4px 12px rgba(0, 0, 0, 0.2);">
+          <img src="https://up.yimg.com/ib/th?id=OIP.W7U5gSQcu6sE864MwDGpGAHaEK&pid=Api&rs=1&c=1&qlt=95" style="height: 12rem;width: 18rem; padding: 2px 1px 0px; border-radius: 8px;" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"> Python</h5>
+            <p class="card-text">Understanding Python as a Programming Language: Introduction to Python: Provide a brief overview of python is ..</p>
+            <a href="python.html" target="_blank" class="btn btn-primary">Continue reading</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pen"><div class="col-lg-4 pb-3">
+        <div class="card" style="width: 18rem; box-shadow: 8px 4px 12px rgba(0, 0, 0, 0.2);">
+          <img src="https://up.yimg.com/ib/th?id=OIP.Jg35DTU8xEFi-BbUaql9CQHaEI&%3Bpid=Api&rs=1&c=1&qlt=95" style="height: 12rem; width: 18rem; padding: 2px 2px 0px; border-radius: 8px;" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Web Designing</h5>
+            <p class="card-text">Web design is quite complex and daunting, but with the development of Internet and technology, web design ..</p>
+            <a href="web designing.html" target="_blank" class="btn btn-primary">Continue reading</a>
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="pen"><div class="col-lg-4 pb-3">
+        <div class="card" style="width: 18rem; box-shadow: 8px 4px 12px rgba(0, 0, 0, 0.2);">
+          <img src="https://up.yimg.com/ib/th?id=OIP.tGsSm0QJIdCPv6fzbkYrgwHaEc&pid=Api&rs=1&c=1&qlt=95" style="height: 12rem;width: 18rem; padding: 2px 2px 0px; border-radius: 8px;" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"> Graphic Designing</h5>
+            <p class="card-text">Understanding the Basics:
+                If you're new to graphic design, a great place to begin is with the fundamentals.There are many...</p>
+            <a href="graphic design .html" target="_blank" class="btn btn-primary">Continue reading</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pen"><div class="col-lg-4 pb-3">
+      <div class="card" style="width: 18rem; box-shadow: 8px 4px 12px rgba(0, 0, 0, 0.2);">
+        <img src="https://www.seoclerk.com/pics/000/939/447/3d49b7feca10349563f05f64104dbc32.jpg" style="height: 12rem;width: 18rem; padding: 2px 2px 0px; border-radius: 8px;" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"> Video Editing</h5>
+          <p class="card-text">Understanding the Basics:
+              If you're new to graphic design, a great place to begin is with the fundamentals.There are many...</p>
+          <a href="#" target="_blank" class="btn btn-primary">Continue reading</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+    <div class="row" style="padding: 20px;">
+     <div class="pen"><div class="col-lg-4 pb-3">
+        <div class="card" style="width: 18rem; box-shadow: 8px 4px 12px rgba(0, 0, 0, 0.2);">
+          <img src="https://shoaib-shabby.github.io/Built-in/16.jpg" style="height: 12rem;width: 18rem; padding: 2px 1px 0px; border-radius: 8px;" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"> Digital Marketing &amp; SEO</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="..." target="_blank" class="btn btn-primary">Continue reading</a>
+          </div>
+        </div>
+      </div>
+    </div>
+     <div class="pen"><div class="col-lg-4 pb-3">
+        <div class="card" style="width: 18rem; box-shadow: 8px 4px 12px rgba(0, 0, 0, 0.2);">
+          <img src="https://shoaib-shabby.github.io/Built-in/3.jpg" style="height: 12rem; width: 18rem; padding: 2px 2px 0px; border-radius: 8px;" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Artificial Intelligence</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="..." target="_blank" class="btn btn-primary">Continue reading</a>
+          </div>
+        </div>
+      </div>
+    </div> 
+      <div class="pen"><div class="col-lg-4 pb-3">
+        <div class="card" style="width: 18rem; box-shadow: 8px 4px 12px rgba(0, 0, 0, 0.2);">
+          <img src="https://shoaib-shabby.github.io/Built-in/10.jpg" style="height: 12rem;width: 18rem; padding: 2px 2px 0px; border-radius: 8px;" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Ethical Hacking</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="..." target="_blank" class="btn btn-primary">Continue reading</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pen"><div class="col-lg-4 pb-3">
+      <div class="card" style="width: 18rem; box-shadow: 8px 4px 12px rgba(0, 0, 0, 0.2);">
+        <img src="data:image/jpeg;base64,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" style="height: 12rem;width: 18rem; padding: 2px 2px 0px; border-radius: 8px;" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">App Development</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+          <a href="..." target="_blank" class="btn btn-primary">Continue reading</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <footer class="footer">
+    <div class="waves">
+      <div class="wave" id="wave1"></div>
+      <div class="wave" id="wave2"></div>
+      <div class="wave" id="wave3"></div>
+      <div class="wave" id="wave4"></div>
+    </div>
+    <img src="logo-1.png" alt="logo" style="height: 50px; width: 50px; border-radius: 50px ; margin-right: 50px;">
+    <ul class="social-icon">
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a></li>
+    </ul>
+    <ul class="menu" style="margin-right: 60px;">
+      <li class="menu__item"><a class="menu__link" href="index.html">Home</a></li>
+      <li class="menu__item"><a class="menu__link" href="about.html">About</a></li>
+      <li class="menu__item"><a class="menu__link" href="#">Services</a></li>
+      <li class="menu__item"><a class="menu__link" href="contact.html">Contact us</a></li>
+
+    </ul>
+    <p class="text-body-secondary" style="color:white; margin-right: 200px;"> &copy; 2022-23 Tech-Trekker, Inc. </p>
+  </footer>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  </div>
+  
+</body>
